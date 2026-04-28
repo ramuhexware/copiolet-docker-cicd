@@ -1,10 +1,12 @@
 # github action workflow to build and push the docker image on push to main 
 name: Build and Push Docker Image
 
+# add a trigger manually to run the workflow on push to main branch 
 on:
   push:
     branches:
-      - main
+      - main  
+      - workflow_dispatch:
 
 jobs:
   build:
